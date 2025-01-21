@@ -28,7 +28,7 @@ const Navbar = ({ handleOrderPopup }) => {
     setShowMenu(!showMenu);
   };
 
-  const whatsappLink = "https://wa.me/918714441230"; // Add your WhatsApp number here
+  const whatsappLink = "https://wa.me/919895045133"; // Add your WhatsApp number here
 
   return (
     <>
@@ -37,7 +37,7 @@ const Navbar = ({ handleOrderPopup }) => {
           <div className="container py-[2px] sm:block hidden">
             <div className="flex items-center justify-between">
               <p className="text-sm">10% off on next booking</p>
-              <p>Mobile No. +91 8714441230</p>
+              <p>Mobile No. +91 9895045133</p>
             </div>
           </div>
         </div>

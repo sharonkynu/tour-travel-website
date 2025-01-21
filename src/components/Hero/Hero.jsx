@@ -18,16 +18,22 @@ const useDebounce = (callback, delay) => {
 const Hero = () => {
   const [priceValue, setPriceValue] = useState(1000);
   const [destination, setDestination] = useState("");
-  const [date, setDate] = useState("");
+  const [fromDate, setFromDate] = useState("");
+  const [toDate, setToDate] = useState("");
   const whatsappNumber = "9895045133"; // Replace with your WhatsApp Business number
 
   // Debouncing the price value to avoid frequent updates on slider change
   const debouncedPrice = useDebounce(() => priceValue, 300);
 
   const handleEnquireNow = useCallback(() => {
-    const message = encodeURIComponent(`Hi, I am interested in packages up to ₹${debouncedPrice}. Can you provide more details?`);
+    const message = encodeURIComponent(`
+      Hi, I am interested in packages up to ₹${debouncedPrice}.
+      My desired destination is ${destination}.
+      I plan to travel from ${fromDate} to ${toDate}.
+      Can you provide more details?
+    `);
     window.location.href = `https://wa.me/${whatsappNumber}?text=${message}`;
-  }, [debouncedPrice, whatsappNumber]);
+  }, [debouncedPrice, destination, fromDate, toDate, whatsappNumber]);
 
   return (
     <div className="bg-black/20 h-full">
@@ -62,36 +68,48 @@ const Hero = () => {
                 />
               </div>
               <div>
-                <label htmlFor="date" className="opacity-70">Date</label>
+                <label htmlFor="from-date" className="opacity-70">From Date</label>
                 <input
                   type="date"
-                  name="date"
-                  id="date"
+                  name="from-date"
+                  id="from-date"
                   className="w-full !placeholder-slate-400 bg-gray-100 my-2 rounded-full focus:outline-primary focus:outline outline-1 p-2"
-                  value={date}
-                  onChange={(e) => setDate(e.target.value)}
+                  value={fromDate}
+                  onChange={(e) => setFromDate(e.target.value)}
                 />
               </div>
               <div>
-                <label htmlFor="price" className="opacity-70 block">
-                  <div className="w-full flex justify-between items-center">
-                    <p>Max Price</p>
-                    <p className="font-bold text-xl">₹{debouncedPrice}</p>
-                  </div>
-                </label>
-                <div className="bg-gray-100 rounded-full p-2 flex items-center justify-center">
-                  <input
-                    type="range"
-                    name="price"
-                    id="price"
-                    className="appearance-none w-full bg-gradient-to-r from-primary to-secondary h-2 rounded-full my-2"
-                    min="1000"
-                    max="200000"
-                    value={priceValue}
-                    step="1000"
-                    onChange={(e) => setPriceValue(e.target.value)}
-                  />
+                <label htmlFor="to-date" className="opacity-70">To Date</label>
+                <input
+                  type="date"
+                  name="to-date"
+                  id="to-date"
+                  className="w-full !placeholder-slate-400 bg-gray-100 my-2 rounded-full focus:outline-primary focus:outline outline-1 p-2"
+                  value={toDate}
+                  onChange={(e) => setToDate(e.target.value)}
+                />
+              </div>
+            </div>
+
+            <div>
+              <label htmlFor="price" className="opacity-70 block">
+                <div className="w-full flex justify-between items-center">
+                  <p>Max Price</p>
+                  <p className="font-bold text-xl">₹{debouncedPrice}</p>
                 </div>
+              </label>
+              <div className="bg-gray-100 rounded-full p-2 flex items-center justify-center">
+                <input
+                  type="range"
+                  name="price"
+                  id="price"
+                  className="appearance-none w-full bg-gradient-to-r from-primary to-secondary h-2 rounded-full my-2"
+                  min="1000"
+                  max="200000"
+                  value={priceValue}
+                  step="1000"
+                  onChange={(e) => setPriceValue(e.target.value)}
+                />
               </div>
             </div>
             <button

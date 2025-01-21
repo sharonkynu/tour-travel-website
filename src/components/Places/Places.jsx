@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Img1 from "../../assets/places/munnar.jpg";
 import Img2 from "../../assets/places/wayanad.jpg";
 import Img3 from "../../assets/places/alappuzha.jpg";
 import Img4 from "../../assets/places/varkala.jpg";
 import Img5 from "../../assets/places/thekkady.jpg";
 import Img6 from "../../assets/places/athirappilly.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Importing AOS styles
 
 const PlacesData = [
   {
@@ -65,6 +67,15 @@ const Places = () => {
     );
   };
 
+  // Initialize AOS animations
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      easing: "ease-out-back", // Animation easing
+      once: true, // Only animate once
+    });
+  }, []);
+
   return (
     <div className="dark:bg-gray-900 dark:text-white bg-gray-50 py-10">
       <section data-aos="fade-up" className="container mx-auto px-4">
@@ -75,12 +86,14 @@ const Places = () => {
           {PlacesData.map((item, index) => (
             <div
               key={index}
+              data-aos="zoom-in"
               className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 max-w-xs mx-auto sm:mx-0"
             >
               <img
                 src={item.img}
                 alt={item.title}
-                className="h-48 w-full object-cover"
+                className="h-48 w-full object-cover object-center" // Centering the image
+                loading="lazy" // Lazy load image
               />
               <div className="p-4 space-y-4">
                 <h2 className="text-xl font-bold">{item.title}</h2>
