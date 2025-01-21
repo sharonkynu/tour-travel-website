@@ -1,5 +1,4 @@
 import React from "react";
-import BlogsComp from "../components/Blogs/BlogsComp";
 import Location from "../components/Location/Location";
 
 const About = () => {
@@ -11,29 +10,16 @@ const About = () => {
             About us
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-            ducimus cupiditate quo harum officia perspiciatis hic ut sunt
-            repudiandae, laboriosam expedita nostrum tempora, consectetur
-            itaque, voluptate error aperiam corrupti ullam aspernatur a!
-            Dolorem, reprehenderit amet quidem deleniti iure rem vel a enim
-            ipsam hic numquam consequatur eius id eaque accusamus repudiandae
-            impedit, quisquam non, harum inventore ratione? Tempora voluptatum
-            ut eligendi corrupti esse, repellat nesciunt illum facilis officiis?
-            Nisi quidem officiis asperiores nostrum ipsa maiores explicabo quia!
-            Corporis provident asperiores fuga eligendi rem temporibus possimus
-            autem excepturi! Facilis sunt corrupti nesciunt asperiores, ab
-            consectetur doloremque, velit a mollitia possimus quaerat!
+          We are passionate about creating unique and unforgettable travel experiences. Our journey began with the desire to share the beauty of the world with others. We offer personalized travel experiences that cater to your individual preferences, ensuring every trip is exceptional.
           </p>
           <br />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
-            suscipit minus similique aliquam recusandae quisquam id nulla
-            tempora voluptate vero.
+          Our team consists of experienced professionals who are dedicated to providing exceptional customer service and attention to detail. We work tirelessly to ensure that your journey is smooth, comfortable, and tailored to your needs. Whether you are looking for a relaxing retreat, an adventurous trek, or a cultural immersion, we are here to make your dream vacation a reality.
+
           </p>
         </div>
       </div>
       <Location />
-      <BlogsComp />
     </>
   );
 };

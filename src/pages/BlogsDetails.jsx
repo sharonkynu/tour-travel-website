@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import BlogsComp from "../components/Blogs/BlogsComp";
 
 const BlogsDetails = (props) => {
   const location = useLocation();
@@ -27,7 +26,6 @@ const BlogsDetails = (props) => {
       </div>
 
       {/* All Blogs Section */}
-      <BlogsComp />
     </div>
   );
 };

@@ -75,15 +75,15 @@ const Places = () => {
           {PlacesData.map((item, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform duration-200 max-w-xs mx-auto sm:mx-0"
+              className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 max-w-xs mx-auto sm:mx-0"
             >
               <img
                 src={item.img}
                 alt={item.title}
                 className="h-48 w-full object-cover"
               />
-              <div className="p-4 space-y-2">
-                <h2 className="text-lg font-bold">{item.title}</h2>
+              <div className="p-4 space-y-4">
+                <h2 className="text-xl font-bold">{item.title}</h2>
                 <p className="text-sm text-gray-600">{item.location}</p>
                 <p className="text-sm text-gray-800">{item.description}</p>
                 <span className="inline-block text-primary text-xs font-semibold bg-primary/10 rounded-full px-3 py-1 mt-2">
