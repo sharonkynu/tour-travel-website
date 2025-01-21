@@ -29,7 +29,7 @@ const FooterLinks = [
 const Footer = () => {
   return (
     <>
-      <div className="dark:bg-gray-950 py-6 sm:py-8 relative overflow-hidden">
+      <div className="dark:bg-gray-950 py-8 sm:py-12 relative overflow-hidden">
         <video
           autoPlay
           loop
@@ -39,35 +39,51 @@ const Footer = () => {
         >
           <source src={NatureVid} type="video/mp4" />
         </video>
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 bg-white/80 backdrop-blur-sm rounded-t-xl shadow-lg">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 bg-white/80 backdrop-blur-sm rounded-t-xl shadow-lg border-t-8 border-primary">
             {/* Company Info */}
-            <div className="py-6 sm:py-8 px-4 flex flex-col items-start">
-              <h1 className="flex items-center gap-3 text-2xl sm:text-3xl font-bold text-primary">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="py-8 sm:py-10 px-6 flex flex-col items-start"
+            >
+              <h1 className="flex items-center gap-4 text-2xl sm:text-3xl font-bold text-primary">
                 <img src={FooterLogo} alt="TravelloGo Logo" className="max-h-[60px]" />
               </h1>
               <p className="text-sm mt-3 text-gray-700 dark:text-gray-300 text-left">
-                We transform dreams into journeys! Whether it's serene beaches, majestic mountains, or bustling cities, we craft personalized experiences that resonate with your wanderlust.
+                Transforming dreams into journeys! Explore serene beaches, majestic mountains, or bustling cities — we create personalized experiences that fit your wanderlust.
               </p>
-              <div className="flex items-center gap-3 mt-5">
-                <FaLocationArrow className="text-lg text-primary transition-all duration-300" />
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1500"
+                className="flex items-center gap-4 mt-5"
+              >
+                <FaLocationArrow className="text-lg text-primary transition-all duration-300 transform hover:scale-110" />
                 <p>Alappuzha, Kerala</p>
               </div>
-              <div className="flex items-center gap-3 mt-3">
-                <FaMobileAlt className="text-lg text-primary transition-all duration-300" />
-                <p>+91 8714441230</p>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                className="flex items-center gap-4 mt-3"
+              >
+                <FaMobileAlt className="text-lg text-primary transition-all duration-300 transform hover:scale-110" />
+                <p>+91 9895045133</p>
               </div>
             </div>
 
             {/* Social Media Links */}
-            <div className="py-6 sm:py-8 px-4 flex flex-col items-start">
-              <h1 className="text-xl font-bold mb-4 sm:mb-5 text-left">Connect with Us</h1>
-              <div className="flex items-center gap-5">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              className="py-8 sm:py-10 px-6 flex flex-col items-start"
+            >
+              <h1 className="text-xl font-bold mb-4 sm:mb-6 text-left text-primary">Connect with Us</h1>
+              <div className="flex items-center gap-6">
                 <a
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-3xl hover:text-primary transition-transform transform hover:scale-110 duration-300"
+                  className="text-3xl hover:text-primary transition-transform transform hover:scale-125 duration-300"
                 >
                   <FaInstagram />
                 </a>
@@ -75,7 +91,7 @@ const Footer = () => {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-3xl hover:text-primary transition-transform transform hover:scale-110 duration-300"
+                  className="text-3xl hover:text-primary transition-transform transform hover:scale-125 duration-300"
                 >
                   <FaFacebook />
                 </a>
@@ -83,15 +99,15 @@ const Footer = () => {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-3xl hover:text-primary transition-transform transform hover:scale-110 duration-300"
+                  className="text-3xl hover:text-primary transition-transform transform hover:scale-125 duration-300"
                 >
                   <FaLinkedin />
                 </a>
                 <a
-                  href="https://wa.me/918714441230"
+                  href="https://wa.me/9895045133"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-3xl text-green-600 hover:text-primary transition-transform transform hover:scale-110 duration-300"
+                  className="text-3xl text-green-600 hover:text-primary transition-transform transform hover:scale-125 duration-300"
                 >
                   <FaWhatsapp />
                 </a>
@@ -99,13 +115,17 @@ const Footer = () => {
             </div>
 
             {/* Important Links */}
-            <div className="py-6 sm:py-8 px-4 flex flex-col items-start">
-              <h1 className="text-xl font-bold mb-3 sm:mb-4 text-left">Important Links</h1>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              className="py-8 sm:py-10 px-6 flex flex-col items-start"
+            >
+              <h1 className="text-xl font-bold mb-4 sm:mb-6 text-left text-primary">Important Links</h1>
               <ul className="flex flex-col gap-4">
                 {FooterLinks.map((link) => (
                   <li
                     key={link.title}
-                    className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary flex items-center gap-2 text-gray-700 dark:text-gray-200"
+                    className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary flex items-center gap-2 text-gray-700 dark:text-gray-200 transition-all"
                   >
                     <Link to={link.link} onClick={() => window.scrollTo(0, 0)}>
                       <span>&#11162;</span>
@@ -118,11 +138,16 @@ const Footer = () => {
           </div>
 
           {/* Footer Bottom */}
-          <div className="text-center py-4 sm:py-5 border-t-2 border-gray-300/50 bg-primary text-white">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="3500"
+            className="text-center py-5 sm:py-6 border-t-2 border-gray-300/50 bg-primary text-white"
+          >
             <p className="text-sm sm:text-base text-center">
               &copy; 2024 All rights reserved |{" "}
-              <span className="hover:text-secondary transition-all duration-300">TravelloGo</span>
+              <span className="hover:text-secondary transition-all duration-300">kynu&co</span>
             </p>
+           
           </div>
         </div>
       </div>
