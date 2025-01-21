@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "../components/Hero/Hero";
-import NatureVid from "../assets/video/main2.mp4";
+import NatureVid from "../assets/video/main.mp4";
 import Places from "../components/Places/Places";
 import Banner from "../components/Banner/Banner";
 import BannerPic from "../components/BannerPic/BannerPic";
