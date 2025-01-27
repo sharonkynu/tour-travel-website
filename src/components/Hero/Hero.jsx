@@ -107,7 +107,7 @@ const Hero = () => {
                   id="price"
                   className="appearance-none w-full bg-gradient-to-r from-primary to-secondary h-2 rounded-full my-2 transition-all ease-in-out"
                   min="1000"
-                  max="200000"
+                  max="100000"
                   value={priceValue}
                   step="1000"
                   onChange={(e) => setPriceValue(e.target.value)}
