@@ -117,7 +117,7 @@ const Hero = () => {
                 <div
                   className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 bg-primary text-white p-2 rounded-md text-sm"
                   style={{
-                    left: `calc(${(priceValue / 200000) * 100}% - 50px)`,
+                    left: `calc(${(priceValue / 100000) * 100}% - 50px)`,
                   }}
                 >
                   ₹{priceValue}
