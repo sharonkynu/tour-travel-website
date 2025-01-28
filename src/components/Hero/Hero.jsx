@@ -51,7 +51,7 @@ const Hero = () => {
         <div
           data-aos="fade-up"
           data-aos-delay="600"
-          className="space-y-6 bg-white rounded-lg p-6 shadow-lg relative"
+          className="space-y-6 bg-white rounded-lg p-6 shadow-lg relative -mt-10" // Slight negative margin to adjust the box upward
         >
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 py-3">
             <div>
