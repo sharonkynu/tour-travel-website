@@ -51,9 +51,9 @@ const Hero = () => {
         <div
           data-aos="fade-up"
           data-aos-delay="600"
-          className="space-y-6 bg-white rounded-lg p-4 sm:p-6 shadow-lg relative w-11/12 sm:w-3/4 mx-auto mt-6" // Smaller width and padding
+          className="space-y-6 bg-white rounded-lg p-6 shadow-lg relative -mt-10" // Slight negative margin to adjust the box upward
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 py-3">
             <div>
               <label htmlFor="destination" className="opacity-80 text-sm">Destination</label>
               <input
@@ -98,7 +98,7 @@ const Hero = () => {
                 <p className="font-bold text-xl">₹{debouncedPrice}</p>
               </div>
             </label>
-            <div className="relative w-full mx-auto">
+            <div className="relative w-3/4 mx-auto">
               {/* Price Slider */}
               <input
                 type="range"
@@ -106,7 +106,7 @@ const Hero = () => {
                 id="price"
                 className="appearance-none w-full bg-gradient-to-r from-primary to-secondary h-2 rounded-full my-2 transition-all ease-in-out"
                 min="1000"
-                max="100000"
+                max="200000"
                 value={priceValue}
                 step="1000"
                 onChange={(e) => setPriceValue(e.target.value)}
@@ -116,7 +116,7 @@ const Hero = () => {
               <div
                 className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 bg-primary text-white p-2 rounded-md text-sm"
                 style={{
-                  left: `calc(${(priceValue / 100000) * 100}% - 50px)`,
+                  left: `calc(${(priceValue / 200000) * 100}% - 50px)`,
                 }}
               >
                 ₹{priceValue}
